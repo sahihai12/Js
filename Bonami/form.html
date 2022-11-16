@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        form{
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        form div{
+            padding: 10px;
+            flex: 1 1 45%;
+        }
+        form input{
+            width: 90%;
+            padding: 10px;
+        }
+        .gender{
+            display: flex;
+            align-items: center;
+        }
+        .gender input{
+            width: fit-content;
+            margin-left: 20px;
+            margin-right: 5px;
+        }
+        button{
+            padding: 20px;
+            width: 100%;
+        }
+        .error{
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <div>
+            <input type="text"  placeholder="First Name" class="firstName" onchange="datafill()">
+            <p class="error"></p>
+        </div>
+        <div>
+            <input type="text"  placeholder="Last Name" class="lastName" onchange="datafill()">
+            <p class="error"></p>
+        </div>
+        <div>
+            <input type="text"  placeholder="Full Name" class="fullName" disabled>
+            <p class="error"></p>
+        </div>
+        <div>
+            <input type="number"  placeholder="Phone Number" class="phone" minlength="8" pattern="[1-9]{1}[0-9]{9}" maxlength="10">
+            <p class="error"></p>
+        </div>
+        <div>
+            <input type="email"  placeholder="Enter Email" class="email">
+            <p class="error"></p>
+        </div>
+        <div>
+            <input type="number"  placeholder="Enter age" class="age" maxvalue="104">
+            <p class="error"></p>
+        </div>
+        <div>
+            <input type="file"  placeholder="Upload file" class="fileupload" accept="image/png, image/jpg, image/jpeg" onchange="checksize(this.value)">
+            <p class="error"></p>
+        </div>
+        
+        <div>
+            <div class="gender">
+                <span>Gender : </span>
+            <input type="radio"  name="gender" value="male"> 
+            <span>male</span>
+            <input type="radio"  name="gender" value="female"> <span>female</span>
+            
+            </div>
+            <p class="error"></p>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script src="./form.js"></script>
+</body>
+</html>

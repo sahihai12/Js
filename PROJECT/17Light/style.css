@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua;
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+}
+.trafficLight {
+    max-width: 100px;
+    border: 1px solid;
+    padding: 10px;
+    margin: auto;
+    background: gray;
+    border-radius: 10px;
+}
+
+.trafficLight .light ,
+.trafficLight .lights{
+    height: 80px;
+    width: 80px;
+    border: 1px solid ;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.trafficLight .light:last-child{
+    margin-bottom: 0px;
+}
+
+.timer {
+   text-align: center;
+   margin-top: 10px;
+   font-size: 30px;
+   font-family: 'Courier New', Courier, monospace;
+}
